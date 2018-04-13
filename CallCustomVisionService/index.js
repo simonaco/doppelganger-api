@@ -1,7 +1,7 @@
 const request = require('request');
 const qs = require('querystring');
 const API_URL =
-  'https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/bbfb33b7-4e47-482c-b7b4-5a1a92f66180/image?iterationId=0d4497ac-d6b5-4987-8c66-b03c5358c59e';
+  'https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/bbfb33b7-4e47-482c-b7b4-5a1a92f66180/image?iterationId=81402b55-5b2c-40b9-a316-66709886038c';
 
 function decodeBase64Image(context, data) {
   var matches = data.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
