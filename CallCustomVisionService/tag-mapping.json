@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Peter Venkman",
+    "img_url": "",
+    "movie": "GHOSTBUSTERS",
+    "actor_name": "Bill Murray"
+  },
+  {
+    "name": "Raymond \"Ray\" Stantz",
+    "img_url": "",
+    "movie": "GHOSTBUSTERS",
+    "actor_name": "Dan Aykroyd"
+  },
+  {
+    "name": "Lorraine Baines",
+    "img_url": "",
+    "movie": "Back to the Future",
+    "actor_name": ""
+  },
+  {
+    "name": "Marty McFly",
+    "img_url": "",
+    "movie": "Back to the Future",
+    "actor_name": ""
+  },
+  {
+    "name": "Dr. Emmett Brown",
+    "img_url": "",
+    "movie": "Back to the Future",
+    "actor_name": ""
+  }
+]
