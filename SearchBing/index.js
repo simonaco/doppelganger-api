@@ -25,7 +25,7 @@ module.exports = function(context, myQueueItem) {
     } else {
       context.log('Retrieved data successfully ' + result.body);
       const body = JSON.parse(result.body);
-      var queueMessages = _.map(body.value, element => {
+      var queueMessages = Array.map(body.value, element => {
         return {
           tag: myQueueItem,
           url: element.contentUrl
