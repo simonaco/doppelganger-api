@@ -23,14 +23,14 @@ module.exports = function(context, myQueueItem) {
         if (!tag) {
           //TODO define tag
         } else {
-          tagImage(tag);
+          tagImage(tag, myQueueItem, context);
         }
       }
     }
   );
 };
 
-function tagImage(tag) {
+function tagImage(tag, myQueueItem, context) {
   const options = {
     url: BASE_URL + 'images/url',
     headers: {
@@ -39,7 +39,7 @@ function tagImage(tag) {
     method: 'POST',
     body: JSON.stringify({
       TagIds: [tag.Id],
-      Urls: [img.url]
+      Urls: [myQueueItem.url]
     })
   };
   request(options, (err, result) => {
