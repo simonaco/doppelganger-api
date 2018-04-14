@@ -17,6 +17,7 @@ module.exports = function(context, myQueueItem) {
         context.log('Error' + err);
         context.done();
       } else {
+        context.log(`Found tag for ${myQueueItem.name}`);
         const body = JSON.parse(result.body);
         let tag = _.find(body.Tags, { Name: myQueueItem.name });
 
