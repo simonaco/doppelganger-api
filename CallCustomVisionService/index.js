@@ -1,7 +1,7 @@
 const request = require('request');
 const qs = require('querystring');
 const decodeBase64Image = require('../shared/image-processing');
-const API_URL = `https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/bbfb33b7-4e47-482c-b7b4-5a1a92f66180/image?iterationId=5e829964-f54e-44e3-be4f-7795c96f3025`;
+const API_URL = `https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/bbfb33b7-4e47-482c-b7b4-5a1a92f66180/image`;
 
 module.exports = function(context, req) {
   context.log('JavaScript HTTP trigger function processed a request.');
@@ -22,6 +22,7 @@ module.exports = function(context, req) {
       context.done();
     } else {
       const body = JSON.parse(result.body);
+      context.log(body);
       const lookalike = body.Predictions[0].Tag;
       const probability = body.Predictions[0].Probability * 100;
       context.res = {
