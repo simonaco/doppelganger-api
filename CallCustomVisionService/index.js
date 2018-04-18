@@ -24,9 +24,11 @@ module.exports = function(context, req) {
       const body = JSON.parse(result.body);
       context.log(body);
       const lookalike = body.Predictions[0].Tag;
-      const probability = body.Predictions[0].Probability * 100;
+      const probability = parseInt(body.Predictions[0].Probability * 100);
       context.res = {
-        body: { doppelganger: `You look ${probability}% like ${lookalike}` }
+        body: {
+          doppelganger: `You look ${probability}% like ${lookalike}`
+        }
       };
       context.done();
     }
