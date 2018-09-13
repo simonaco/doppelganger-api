@@ -27,7 +27,22 @@
             "endsPattern": "^.*Job host started.*"
           }
         }
-      ]
+      ],
+      "options": {
+        "env": {
+          "languageWorkers:node:arguments": "--inspect=5858"
+        }
+      },
+      "dependsOn": "installExtensions"
+    },
+    {
+      "label": "installExtensions",
+      "identifier": "installExtensions",
+      "command": "func extensions install",
+      "type": "shell",
+      "presentation": {
+        "reveal": "always"
+      }
     }
   ]
 }
