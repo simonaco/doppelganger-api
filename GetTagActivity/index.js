@@ -18,7 +18,8 @@ async function createTag(context) {
     context.log(response);
     return response.data;
   } catch (error) {
-    throw new Error(error);
+    context.log(`Error code: ${error.code} message: ${error.message}`);
+    throw new Error(error.message);
   }
 }
 async function getTag(context) {

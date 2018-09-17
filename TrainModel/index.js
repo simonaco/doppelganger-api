@@ -9,7 +9,13 @@ module.exports = df(function*(context) {
       'SearchBingActivity',
       actor
     );
+
     const tag = yield context.df.callActivityAsync('GetTagActivity', actor);
+    const bla = yield context.df.callActivityAsync('CreateImagesActivity', {
+      id: tag.id,
+      urls: images
+    });
+    context.log(bla);
   } catch (error) {
     context.log(error);
   }

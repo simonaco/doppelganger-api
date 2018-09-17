@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    {
+      "name": "images",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
