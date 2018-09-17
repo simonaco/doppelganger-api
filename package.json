@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "durable-functions": "0.0.3",
     "lodash": "^4.17.5",
     "request": "^2.85.0",
