@@ -11,11 +11,17 @@ module.exports = df(function*(context) {
     );
 
     const tag = yield context.df.callActivityAsync('GetTagActivity', actor);
-    const bla = yield context.df.callActivityAsync('CreateImagesActivity', {
-      id: tag.id,
-      urls: images
-    });
-    context.log(bla);
+    const createImages = yield context.df.callActivityAsync(
+      'CreateImagesActivity',
+      {
+        id: tag.id,
+        urls: images
+      }
+    );
+    const trainProject = yield context.df.callActivityAsync(
+      'TrainProjectActivity',
+      actor
+    );
   } catch (error) {
     context.log(error);
   }
